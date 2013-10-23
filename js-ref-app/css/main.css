@@ -1,0 +1,89 @@
+body {
+    font-family: source-sans-pro, sans-serif;
+    font-size: 15px;
+}
+
+.dropdown-menu {
+    max-height: 400px;
+    overflow: auto;
+    width: 230px;
+}
+
+.dropdown-menu>li>ul>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.dropdown-menu ul {
+    margin-left: 0px;
+}
+
+.list-item {
+    padding-top: 6px;
+    padding-left: 56px;
+}
+
+.no-contacts {
+    display: none;
+}
+
+#companies-list th {
+    text-align: center;
+}
+#companies-list td {
+    text-align: center;
+    vertical-align: middle;
+}
+.btn-primary a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-info a {
+    color: white;
+    text-decoration: none;
+}
+
+#contacts-list th {
+    text-align: center;
+}
+
+#contacts-list td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.editable-content:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.edit-element {
+    display:none;
+}
+
+.dropdown-menu li ul {
+    list-style-type: none;
+}
+
+.dropdown-menu > li > ul > li > a:hover,
+.dropdown-menu > li > ul > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #0081c2;
+    background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+    background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+}
