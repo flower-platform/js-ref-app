@@ -5,13 +5,10 @@ define(function (require) {
     var $ = require('jquery');
     var _ = require('underscore');
     var Backbone = require('backbone');
-    var tpl = require('text!tpl/Home.html');
-    var template = _.template(tpl);
+    
+    var View = require('app/views/abstract/View');
 
-    return Backbone.View.extend({
-        render: function () {
-            this.$el.html(template());
-            return this;
-        }
+    return View.extend({
+      	tpl: require('text!tpl/Home.html')
     });
 });

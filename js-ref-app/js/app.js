@@ -14,12 +14,12 @@ require.config({
         tpl: '../tpl'
     },
 
-//    map: {
-//        '*': {
-//            'app/models/Company': 'app/models/jsonp/Companies',
-//            'app/models/Contact': 'app/models/jsonp/Contacts'
-//        }
-//    },
+    map: {
+        '*': {
+            'app/models/Company': 'app/models/storage/Companies',
+            'app/models/Contact': 'app/models/storage/Contacts'
+        }
+    },
 
     shim: {
         'backbone': {

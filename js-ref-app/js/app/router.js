@@ -59,18 +59,18 @@ define(function (require) {
         },
 
         companiesDetails: function() {
-            require(["app/views/Companies", "app/models/Company"], function (CompaniesView, models) {
+            require(["app/views/CompaniesTable", "app/models/Company"], function (CompaniesView, models) {
                 var companies = new models.CompanyCollection();
                 companies.fetch({reset: true, data: {name: ''}, success: function (data) {
                     console.log("Companies fetched");
-                    companiesView = new CompaniesView({collection: data, el: $content})
+                    var companiesView = new CompaniesView({collection: data, el: $content})
                     companiesView.render();
                 },
                 error: function() {
                     console.log("Something happened");
                 }});
 
-                frameView.selectMenuItem('companies-menu');
+//                frameView.selectMenuItem('companies-menu');
             });
         },
 
@@ -90,15 +90,15 @@ define(function (require) {
             });
         },
 
-        contactsDetails: function() { require(["app/views/Contacts", "app/models/Contact"], function (ContactsView, models) {
+        contactsDetails: function() { require(["app/views/ContactsTable", "app/models/Contact"], function (ContactsView, models) {
             var contacts = new models.ContactCollection();
             contacts.fetch({reset: true, data: {name: ''}, success: function (data) {
                 console.log("Contacts fetched");
-                contactsView = new ContactsView({collection: data, el: $content})
+                var contactsView = new ContactsView({collection: data, el: $content})
                 contactsView.render();
             }});
 
-            frameView.selectMenuItem('contacts-menu');
+//            frameView.selectMenuItem('contacts-menu');
         });
         },
 
