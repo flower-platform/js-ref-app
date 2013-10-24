@@ -12,12 +12,14 @@ define(function (require) {
 	var $content = $("#content", frameView.el);
 	
 	var HomeView = require('app/views/Home');
+    var companyView = null;
+    var contactView = null;
+
 //        ContactUsView    = require('app/views/ContactUs'),
 //        homeView = new HomeView({el: $content}),
 //        contactUsView = new ContactUsView({el: $content}),
-//        companyView = null,
+
 //        companiesView = null,
-//        contactView = null,
 //        contactsView = null;
 
 //    $body.click(function () {
@@ -54,7 +56,7 @@ define(function (require) {
                         companyView.render();
                     }
                 });
-                frameView.selectMenuItem();
+ //               frameView.selectMenuItem();
             });
         },
 
@@ -86,7 +88,7 @@ define(function (require) {
                         contactView.render();
                     }
                 });
-                frameView.selectMenuItem();
+ //               frameView.selectMenuItem();
             });
         },
 

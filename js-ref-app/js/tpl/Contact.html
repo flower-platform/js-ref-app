@@ -1,0 +1,34 @@
+<div id="details" class="span7">
+    <!--<p><img src="images/ContactsAvatars/<%= pic %>" width="160" height="160"/></p>-->
+    <h3 class="view-element"><%= name %></h3>
+    <input type="text" class="edit-element" id="name" placeholder="<%= name %>"/>
+    <h4 class="view-element"><%= title %></h4>
+    <input type="text" class="edit-element" id="title" placeholder="<%= title %>"/>
+
+    <br>
+    <table class="table table-striped">
+        <tr>
+            <td>Cell Phone:</td>
+            <td class="view-element"><i class="icon-user"></i> <%= cellPhone %>   </td>
+            <td class="edit-element"><input type="text" id="cell-phone" placeholder="<%= cellPhone %>"/></td>
+        </tr>
+        <tr>
+            <td>Office Phone:</td>
+            <td class="view-element"><i class="icon-home"></i><%= officePhone %></td>
+            <td class="edit-element"><input type="text" id="office-phone" placeholder="<%= officePhone %>"/></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td class="view-element"><i class="icon-envelope"></i> <a href="mailto:<%= email %>"><%= email %></a></td>
+            <td class="edit-element"><input type="text" id="email" placeholder="<%= email %>"/></td>
+        </tr>
+        <tr>
+            <td>Twitter:</td>
+            <td class="view-element"><i class="icon-retweet"></i> <a href=""><%= twitterId %></a></td>
+            <td class="edit-element"><input type="text" id="twitter" placeholder="<%= twitterId %>"/></td>
+        </tr>
+    </table>
+
+    <button class="btn btn-primary view-element" type="button" id="edit-contact" >Edit me</button>
+    <button class="btn btn-primary edit-element" type="button" id="save-contact" >Save</button>
+</div>
