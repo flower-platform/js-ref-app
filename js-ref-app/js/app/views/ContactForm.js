@@ -12,6 +12,6 @@ define (function(require) {
 
     return FormView.extend({
         pageModel: "contact",
-        tpl: require('text!tpl/Contact.html')
+        tpl: require('text!tpl/ContactForm.html')
     });
 });

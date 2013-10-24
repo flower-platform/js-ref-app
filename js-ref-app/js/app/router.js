@@ -45,7 +45,7 @@ define(function (require) {
         },
 
         companyDetails: function (id) {
-            require(["app/views/Company", "app/models/Company"], function (CompanyView, models) {
+            require(["app/views/CompanyForm", "app/models/Company"], function (CompanyView, models) {
                 var company = new models.Company({id: id});
                 company.fetch({
                     success: function (data) {
@@ -77,7 +77,7 @@ define(function (require) {
         },
 
         contactDetails: function(id) {
-            require(["app/views/Contact", "app/models/Contact"], function (ContactView, models) {
+            require(["app/views/ContactForm", "app/models/Contact"], function (ContactView, models) {
                 var contact = new models.Contact({id: id});
                 contact.fetch({
                     success: function(data) {
