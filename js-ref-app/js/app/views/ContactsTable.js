@@ -14,7 +14,7 @@ define(function (require) {
         TableView = require('app/views/abstract/TableView');
 
     return TableView.extend({
-    	tableFooterId: "contacts-list-footer",
+
        	tableItemViewClass: require('app/views/ContactsTableItem'),
        	tpl: require('text!tpl/ContactsTable.html')
     });

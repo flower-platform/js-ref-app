@@ -14,7 +14,6 @@ define(function (require) {
         TableView = require('app/views/abstract/TableView');
 
     return TableView.extend({
-    	tableFooterId: "companies-list-footer",
        	tableItemViewClass: require('app/views/CompaniesTableItem'),
        	tpl: require('text!tpl/CompaniesTable.html')
     });
