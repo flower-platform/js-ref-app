@@ -64,7 +64,7 @@ body {
     box-shadow: 0 0 10px #9ecaed;
 }
 
-.edit-element {
+#details .edit-element {
     display:none;
 }
 

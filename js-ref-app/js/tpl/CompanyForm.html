@@ -1,0 +1,33 @@
+<div id="details" class="span7">
+    <!--<p><img src="images/CompanyLogos/<%= logo %>" width="160" height="160"/></p>-->
+    <h3 class="view-element"><%= name %></h3>
+    <input type="text" class="edit-element" id="name" value="<%= name %>"/>
+    <h4 class="view-element"><%= industry %></h4>
+    <input type="text" class="edit-element" id="industry" value="<%= industry %>"/>
+    <br>
+    <table class="table table-striped">
+        <tr>
+            <td>Revenue:</td>
+            <td class="view-element"><i class="icon-tag"></i><span><%= revenue %></span> $</td>
+            <td><input type="text" class="edit-element" id="revenue" value="<%= revenue %>"/></td>
+        </tr>
+        <tr>
+            <td>Employees:</td>
+            <td class="view-element"><i class="icon-user"></i> <%= employees %></td>
+            <td><input type="text" class="edit-element" id="employees" value="<%= employees %>"/></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td class="view-element"><i class="icon-home"></i><%= address %></td>
+            <td><input type="text" class="edit-element" id="address" value="<%= address %>"/></td>
+        </tr>
+        <tr>
+            <td>Website:</td>
+            <td class="view-element"><i class="icon-globe"></i> <a href=""><%= website %></a></td>
+            <td><input type="text" class="edit-element" id="website" value="<%= website %>"/></td>
+        </tr>
+    </table>
+
+    <button class="btn btn-primary view-element" type="button" id="edit-company" >Edit me</button>
+    <button class="btn btn-primary edit-element" type="button" id="save-company" >Save</button>
+</div>
