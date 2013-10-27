@@ -7,8 +7,8 @@ define(function(require) {
 	return View.extend({
 
 		initialize : function() {
-			this.collection.on("reset", this.render, this);
-			this.collection.on("add", this.render, this);
+//			this.collection.on("reset", this.render, this);
+//			this.collection.on("add", this.render, this);
 		},
 
 		render : function() {

@@ -72,7 +72,7 @@ define(function (require) {
 
         CompanyCollection = Backbone.Collection.extend({
 
-            model: Company,
+//            model: Company,
 
             sync: function (method, model, options) {
                 if (method === "read") {
