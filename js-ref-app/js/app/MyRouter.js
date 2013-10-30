@@ -1,13 +1,15 @@
 // template backboneClass
 define(function (require) {
     
-    "use strict";
+//    "use strict";
     
     var $ = require('jquery');
     var _ = require('underscore');
     var Backbone = require('backbone');
 	var HomeView = require('app/views/Home');
-	var FrameView = require('app/views/Frame');// children-insert-point requireEntry
+	var FrameView = require('app/views/Frame');
+	var CompaniesCollection = require('app/models/local/CompaniesCollection');
+	var CompaniesTableView = require('app/views/CompaniesTableView');// children-insert-point requireEntry
 
 	var $body;
 	var frameView;
@@ -17,8 +19,8 @@ define(function (require) {
     
     	routes: {
             "": "showHome",
+            "companies" : "showCompanies",
             "company/:id": "companyDetails",
-            "companies" : "companiesDetails",
             "contact/:id" : "contactDetails",
             "contacts" : "contactsDetails",
             "contact-us": "contactUs",
@@ -56,12 +58,9 @@ define(function (require) {
         },
         
         showCompanies: function() {
-        	
-        },
+        	this.showTableView(companiesTableView, companiesCollection);
+        }
         
-        showCompanies1: function() {
-        	
-        }// children-insert-point backboneClassMember
    
     });
 

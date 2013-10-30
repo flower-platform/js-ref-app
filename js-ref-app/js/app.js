@@ -32,7 +32,8 @@ require.config({
     }
 });
 
-require(['jquery', 'backbone', 'app/router'], function ($, Backbone, Router) {
-    var router = new Router();
+require(['jquery', 'backbone', 'app/MyRouter'], function ($, Backbone, Router) {
+//require(['jquery', 'backbone', 'app/router'], function ($, Backbone, Router) {
+	var router = new Router();
     Backbone.history.start();
 });
