@@ -5,7 +5,8 @@ define(function (require) {
     
     var _ = require('underscore');
     var Backbone = require('backbone');
-    // children-insert-point requireEntry
+    
+    var $ = require('jquery');// children-insert-point requireEntry
     
     return Backbone.Collection.extend({
     	
