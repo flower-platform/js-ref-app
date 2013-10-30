@@ -12,8 +12,8 @@ define(function (require) {
 
     return View.extend({
         initialize : function() {
-            this.events["click #edit-" + this.pageModel] = "editView";
-            this.events["click #save-" + this.pageModel] = "saveInfo";
+            this.events["click #edit-" + this.htmlIdSuffix] = "editView";
+            this.events["click #save-" + this.htmlIdSuffix] = "saveInfo";
         },
         render : function() {
             if (!this.template) {

@@ -16,6 +16,6 @@ define(function (require) {
     return FormView.extend({
 
        tpl: require('text!tpl/CompanyForm.html'),
-       pageModel: "company"
+       htmlIdSuffix: "company"
     });
 });
