@@ -1,8 +1,12 @@
+// template backboneClass
 define(function (require) {
 
 	(function(){
 	    var initializing = false, fnTest = /xyz/.test(function(){xyz;}) ? /\b_super\b/ : /.*/;
 
+      	var $ = require('jquery');
+      	var _ = require('underscore');// children-insert-point requireEntry
+      
 	    // The base Class implementation (does nothing)
 	    this.Class = function(){};
 
