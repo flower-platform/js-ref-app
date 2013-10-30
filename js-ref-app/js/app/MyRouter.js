@@ -8,8 +8,10 @@ define(function (require) {
     var Backbone = require('backbone');
 	var HomeView = require('app/views/Home');
 	var FrameView = require('app/views/Frame');
+	var GenericModel = require('app/models/local/abstract/GenericModel');
 	var CompaniesCollection = require('app/models/local/CompaniesCollection');
-	var CompaniesTableView = require('app/views/CompaniesTableView');// children-insert-point requireEntry
+	var CompaniesTableView = require('app/views/CompaniesTableView');
+	var CompanyFormView = require('app/views/CompanyFormView');// children-insert-point requireEntry
 
 	var $body;
 	var frameView;
@@ -20,7 +22,7 @@ define(function (require) {
     	routes: {
             "": "showHome",
             "companies" : "showCompanies",
-            "company/:id": "companyDetails",
+            "company/:id": "showCompany",
             "contact/:id" : "contactDetails",
             "contacts" : "contactsDetails",
             "contact-us": "contactUs",
@@ -35,6 +37,7 @@ define(function (require) {
 
     		companiesTableView = new CompaniesTableView({el: $content});
     		companiesCollection = new CompaniesCollection();
+    		companyFormView = new CompanyFormView({el: $content});
     		
     	},
         
@@ -50,6 +53,16 @@ define(function (require) {
 	            }});
         },
         
+        showFormView: function (view, collection, id) {
+            var model = new GenericModel({id: id, modelCollection: collection});
+            model.fetch({
+                success: function (data) {
+                	view.setModel(data);
+                	view.render();
+                }
+            });
+        },
+        
     	showHome: function () {
         	var view = new HomeView({el: $content});
             view.delegateEvents();
@@ -59,6 +72,10 @@ define(function (require) {
         
         showCompanies: function() {
         	this.showTableView(companiesTableView, companiesCollection);
+        },
+        
+        showCompany: function(id) {
+        	this.showFormView(companyFormView, companiesCollection, id);
         }
         
    
