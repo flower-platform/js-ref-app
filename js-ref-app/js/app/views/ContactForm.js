@@ -10,8 +10,8 @@ define (function(require) {
     var $ = require("jquery"), _ = require("underscore"), Backbone = require("backbone");
     var FormView = require('app/views/abstract/FormView');
 
-    return FormView.extend({
-        pageModel: "contact",
-        tpl: require('text!tpl/ContactForm.html')
+    return FormView.extend({    	
+        tpl: require('text!tpl/ContactForm.html'),
+        htmlIdSuffix: "contact"
     });
 });
