@@ -7,11 +7,11 @@
  */
 require.config({
 
-    baseUrl: 'js/lib',
+    baseUrl: 'lib',
 
     paths: {
-        app: '../app',
-        tpl: '../tpl'
+        app: '../js/app',
+        tpl: '../js/tpl'
     },
 
     map: {

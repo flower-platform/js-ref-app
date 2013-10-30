@@ -1,10 +1,14 @@
+// template backboneClass
 define(function (require) {
 
     "use strict";
+    
     var _ = require('underscore');
     var Backbone = require('backbone');
+    // children-insert-point requireEntry
     
     return Backbone.Collection.extend({
+    	
     	numberOfSampleObjects: 10,
     	
     	sampleObjectGenerator: null,
@@ -38,6 +42,7 @@ define(function (require) {
 	            options.success(this.getData());
 	        }
 	    }
+        // children-insert-point backboneClassMember
 
     });
 });

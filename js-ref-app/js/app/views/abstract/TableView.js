@@ -1,9 +1,14 @@
+// template backboneClass
 define(function(require) {
 
 	"use strict";
-	var $ = require('jquery'), _ = require('underscore'), Backbone = require('backbone');
+	
+	var $ = require('jquery');
+	var _ = require('underscore');
+	var Backbone = require('backbone');
 	var View = require('app/views/abstract/View');
-
+	// children-insert-point requireEntry
+	
 	return View.extend({
 
 		initialize : function() {
@@ -25,5 +30,6 @@ define(function(require) {
 		setCollection : function(collection) {
 			this.collection = collection;
 		}
+		// children-insert-point backboneClassMember
 	});
 });

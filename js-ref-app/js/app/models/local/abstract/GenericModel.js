@@ -1,3 +1,4 @@
+// template backboneClass
 define(function (require) {
 
     "use strict";
@@ -5,6 +6,7 @@ define(function (require) {
     var $ = require('jquery');
     var _ = require('underscore');
     var Backbone = require('backbone');
+    // children-insert-point requireEntry
     
     return Backbone.Model.extend({
     	
@@ -25,6 +27,7 @@ define(function (require) {
 	        	options.success(this.findById(parseInt(this.id)));
 	        }
 	    }
+        // children-insert-point backboneClassMember
 
     });
 });
