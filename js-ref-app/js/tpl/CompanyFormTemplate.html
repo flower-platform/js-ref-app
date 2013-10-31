@@ -1,18 +1,21 @@
 <!-- template form -->
 <table class="table table-striped">
 	<tr>
-		<td>Name:</td>
-		<td class="view-element"><i class="icon-tag"></i><span><%= name %></span> $</td>
-		<td><input type="text" class="edit-element" id="name" placeholder="<%= name %>"/></td>
-	</tr>
-	<tr>
 		<td>Id:</td>
-		<td class="view-element"><i class="icon-tag"></i><span><%= id %></span> $</td>
-		<td><input type="text" class="edit-element" id="id" placeholder="<%= id %>"/></td>
+		<td class="view-element"><i class="icon-home"></i><%= id %></td>
+		<td><input type="text" class="edit-element" id="id" value="<%= id %>"/></td>
 	</tr>
 	<tr>
 		<td>Industry:</td>
-		<td class="view-element"><i class="icon-tag"></i><span><%= industry %></span> $</td>
-		<td><input type="text" class="edit-element" id="industry" placeholder="<%= industry %>"/></td>
+		<td class="view-element"><i class="icon-home"></i><%= industry %></td>
+		<td><input type="text" class="edit-element" id="industry" value="<%= industry %>"/></td>
+	</tr>
+	<tr>
+		<td>Name:</td>
+		<td class="view-element"><i class="icon-home"></i><%= name %></td>
+		<td><input type="text" class="edit-element" id="name" value="<%= name %>"/></td>
 	</tr><!-- children-insert-point formItem -->
 </table>
+
+<button class="btn btn-primary view-element" type="button" id="edit-company">Edit</button>
+<button class="btn btn-primary edit-element" type="button" id="save-@idSuffix">Save</button>

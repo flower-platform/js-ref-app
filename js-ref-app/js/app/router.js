@@ -51,7 +51,7 @@ define(function (require) {
             "contactTable" : "showContactTable"
         },
 
-        home: function () {
+    errorome: function () {
 //        	alert('here');
         	var view = new HomeView({el: $content});
             view.delegateEvents();
