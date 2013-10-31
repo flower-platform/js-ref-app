@@ -18,9 +18,10 @@ define(function(require) {
 
 		render : function() {
 			View.prototype.render.apply(this);
-			this.$el = this.$el.find("table");   // or we can find by (.table) or by (table) o by(# + id)
+			//this.$el = this.$el.find("table");
+            var $table = this.$el.find("table");  // or we can find by (.table) or by (table) o by(# + id)
 			_.each(this.collection.models, function(model) {
-				this.$el.append(new this.tableItemViewClass({
+                $table.append(new this.tableItemViewClass({
 					model : model
 				}).render().el);
 			}, this);
